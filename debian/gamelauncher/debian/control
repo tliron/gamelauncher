@@ -1,0 +1,39 @@
+#
+# Standards-Version:
+#
+#  To find the max version supported locally: "apt-get install debian-policy"
+#  and then browse to
+#  "file:///usr/share/doc/debian-policy/policy.html/index.html". The version
+#  will be at the bottom of the page. Only the first three version fields are
+#  normally specified here.
+#
+# debhelper version:
+#
+#  Use "man debhelper" to find the recommended compatibility version to use
+#  locally. This version must be specified in the "debian/compat" file, but here
+#  we will add a build dependency for it.
+#
+# Other package versions:
+#
+#  Use "apt-cache info" to find their local versions.
+#
+# Missing build dependencies for Ubuntu 12.04 (precise):
+#
+#  valac-0.18:
+#   "add-apt-repository ppa:vala-team"
+#
+Standards-Version: 3.9.3
+Source: gamelauncher
+Section: games
+Priority: optional
+Maintainer: Tal Liron <tal.liron@gmail.com>
+Vcs-Browser: http://code.google.com/p/gamelauncher/source/browse/
+Vcs-Git: https://code.google.com/p/gamelauncher/
+Build-Depends: debhelper (>=9), valac-0.18 (>= 0.18.0), libglib2.0-dev (>= 2.32.1), libgee-dev (>=0.6.4), libgtk-3-dev (>= 3.4.1), libunity-dev (>= 5.10.0)
+
+Package: gamelauncher
+Architecture: any
+Homepage: http://code.google.com/p/gamelauncher/
+Depends: libglib2.0-0 (>= 2.32.1), libgee2 (>= 0.6.4), libgtk-3-0 (>= 3.4.1), libunity9 (>= 5.10.0), ${shlibs:Depends}, ${misc:Depends}
+Description: Game Launcher
+ Makes it easy to launch fullscreen games in a separate gaming desktop.

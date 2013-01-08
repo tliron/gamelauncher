@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+SRC=src
+BIN=debian/tmp/bin
+
+include components.mk
+
+%:
+	echo $(PWD)
+	dh $@
+
+override_dh_auto_install: gamelauncher

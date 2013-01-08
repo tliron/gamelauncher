@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Game Launcher
+Comment=Launches games in a separate gaming desktop
+Type=Application
+Categories=GNOME;GTK;Game;
+Icon=gamelauncher
+Exec=/usr/bin/gamelauncher
+Terminal=false

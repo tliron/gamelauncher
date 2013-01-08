@@ -1,0 +1,3 @@
+bin/gamelauncher                 usr/bin
+resources/gamelauncher.desktop   usr/share/applications
+resources/gamelauncher.svg       usr/share/icons/gnome/scalable/apps
