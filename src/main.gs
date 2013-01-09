@@ -34,12 +34,16 @@ namespace GameLauncher
             _favorite_applications = new ApplicationsView(self, "Favorites")
             _all_applications = new ApplicationsView(self, "All Applications")
             
+            // Note: Newer GNOME desktops tend to disable image visibility by default,
+            // but we will explicitly show the images because we think it's easier to
+            // understand at a glance!
+
             button_box = new ButtonBox(Orientation.VERTICAL)
             var add_favorite = new Button.from_stock(Stock.ADD)
-            add_favorite.always_show_image = true
+            add_favorite.image.show()
             add_favorite.clicked.connect(on_add_favorite)
             var remove_favorite = new Button.from_stock(Stock.REMOVE)
-            remove_favorite.always_show_image = true
+            remove_favorite.image.show()
             remove_favorite.clicked.connect(on_remove_favorite)
             button_box.pack_start(add_favorite)
             button_box.pack_start(remove_favorite)

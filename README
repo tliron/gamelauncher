@@ -102,8 +102,8 @@ directory. To clean them out:
 
 To build using a pbuilder environment:
 
- "make deb.pbuilder", "make dsc.pbuilder"
-   Same as "deb" and "dsc", but for the pbuilder environment.
+ "make deb.pbuilder"
+   Same as "deb", but for the pbuilder environment.
 
 Note that when using pbuilder all build dependencies will be automatically
 installed.
