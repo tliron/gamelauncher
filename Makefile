@@ -8,7 +8,7 @@ all: gamelauncher
 
 all.ccode: gamelauncher.ccode
 
-clean: deb.clean
+clean: debian.clean
 	$(RM) -rf $(BIN)/*
 	$(RM) -rf c/*
 
