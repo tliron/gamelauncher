@@ -66,7 +66,7 @@ namespace GameLauncher
             update()
         
         def on_error(e: Error, message: string)
-            var dialog = new MessageDialog.with_markup(self, DialogFlags.MODAL, MessageType.ERROR, ButtonsType.CLOSE, "%s\n\n%s".printf(message, e.message))
+            var dialog = new MessageDialog.with_markup(self, DialogFlags.MODAL, MessageType.ERROR, ButtonsType.OK, "%s\n\n%s", message, e.message)
             dialog.run()
             dialog.destroy()
         
@@ -161,6 +161,9 @@ namespace GameLauncher
                 revoke_administrative_privileges()
                 try
                     add_to_audio_group(Environment.get_user_name())
+                    var dialog = new MessageDialog.with_markup(self, DialogFlags.MODAL, MessageType.INFO, ButtonsType.OK, "%s", "You will need to logout from your desktop session and login again in order for your new audio permissions to work!")
+                    dialog.run()
+                    dialog.destroy()
                 except e: SpawnError
                     on_error(e, "Could not add you to the audio group!")
                 revoke_administrative_privileges()
