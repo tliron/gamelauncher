@@ -1,0 +1,1 @@
+Easy installation in Ubuntu using [this PPA](https://launchpad.net/~emblem-parade/+archive/gamelauncher).
